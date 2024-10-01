@@ -24,6 +24,24 @@ public class TestController : ControllerBase
             }
         ];
     }
+    
+    [HttpGet("company")]
+    public IEnumerable<Company> GetCompanies()
+    {
+        return
+        [
+            new Company
+            {
+                Name = "Microsoft"
+            }
+        ];
+    }
+    
+    [HttpPost]
+    public IActionResult Post([FromBody] Entity entity)
+    {
+        return Ok(entity);
+    }
 }
 
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type")]
