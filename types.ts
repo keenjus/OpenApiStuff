@@ -57,8 +57,7 @@ export type components = {
             $type?: "Person";
             firstName: string;
             lastName: string;
-            /** @enum {string} */
-            gender: "Male" | "Female";
+            gender: number;
             values?: string[] | null;
         };
     };

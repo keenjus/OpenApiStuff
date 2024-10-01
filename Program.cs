@@ -13,7 +13,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi(options =>
 {
-    options.AddSchemaTransformer<EnumSchemaTransformer>();
+    // options.AddSchemaTransformer<EnumSchemaTransformer>();
 });
 
 var app = builder.Build();
