@@ -1,0 +1,15 @@
+{
+  "name": "openapistuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "types": "openapi-typescript --export-type http://localhost:5052/openapi/v1.json --output ./types.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "openapi-typescript": "^7.4.1"
+  }
+}
