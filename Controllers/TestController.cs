@@ -30,6 +30,12 @@ public class TestController : ControllerBase
     {
         return new SectionDto();
     }
+    
+    [HttpGet("query")]
+    public IEnumerable<Entity> Search(Gender gender = Gender.Female)
+    {
+        return [];
+    }
 }
 
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type")]
