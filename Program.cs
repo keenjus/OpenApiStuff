@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Http.Json;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,11 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 builder.Services.AddOpenApi(options =>
 {
     // options.AddSchemaTransformer<EnumSchemaTransformer>();
+});
+
+builder.Services.Configure<JsonOptions>(x =>
+{
+    x.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
 var app = builder.Build();
